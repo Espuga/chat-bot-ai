@@ -22,7 +22,9 @@ Fetch all existing chats.
 [
   {
     "_id": "chat_id_1",
-    "name": "Project Assistant"
+    "name": "Project Assistant",
+    "loading": false,
+    "timestamp": "Tue, 22 Apr 2025 17:50:44 GMT"
   },
   ...
 ]
@@ -45,9 +47,12 @@ Create a new chat.
 **Response:**
 
 ```json
+
 {
   "_id": "chat_id_2",
-  "name": "My New Chat"
+  "name": "My New Chat",
+  "loading": false,
+  "timestamp": "Tue, 22 Apr 2025 17:50:44 GMT"
 }
 ```
 
@@ -79,13 +84,15 @@ Get all messages in a chat, along with a loading status.
       "_id": "message_id_1",
       "chat_id": "chat_id_1",
       "role": "user",
-      "message": "Hello"
+      "message": "Hello",
+      "timestamp": "Tue, 22 Apr 2025 17:50:50 GMT"
     },
     {
       "_id": "message_id_2",
       "chat_id": "chat_id_1",
       "role": "assistant",
-      "message": "Hi there! How can I help you?"
+      "message": "Hi there! How can I help you?",
+      "timestamp": "Tue, 22 Apr 2025 17:50:50 GMT"
     }
   ]
 }
@@ -107,8 +114,11 @@ Send a new message to the chatbot. This triggers a response from the AI model an
 
 ```json
 {
-  "role": "assistant",
-  "message": "The uploaded files contain information about the Q4 budget and timeline."
+    "_id": "message_id_2",
+    "chat_id": "chat_id_1",
+    "role": "assistant",
+    "message": "Hi there! How can I help you?",
+    "timestamp": "Tue, 22 Apr 2025 17:50:50 GMT"
 }
 ```
 
@@ -125,7 +135,8 @@ Retrieve metadata and contents of all uploaded files.
   {
     "_id": "info_id_1",
     "filename": "data.txt",
-    "text": "Project schedule and goals for Q4..."
+    "text": "Project schedule and goals for Q4...",
+    "timestamp": "Tue, 22 Apr 2025 17:49:23 GMT"
   },
   ...
 ]
@@ -145,7 +156,8 @@ Upload a new text file (used as reference/context for AI answers).
 {
   "_id": "info_id_2",
   "filename": "notes.txt",
-  "text": "Meeting notes and action items..."
+  "text": "Meeting notes and action items...",
+  "timestamp": "Tue, 22 Apr 2025 17:49:23 GMT"
 }
 ```
 
